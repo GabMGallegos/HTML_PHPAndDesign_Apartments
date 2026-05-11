@@ -46,17 +46,27 @@ $status = $_GET['status'] ?? '';
                 type="text" 
                 id="name" 
                 name="name" 
-                value="<?= htmlspecialchars($customer->name) ?>" 
+                value="<?= htmlspecialchars($apartment->name) ?>" 
                 required
             >
 
-            <label for="age">Age</label>
+            <label for="age">Number of rooms</label>
             <input 
                 type="number" 
-                id="age" 
-                name="age" 
+                id="number_of_rooms" 
+                name="number_of_rooms" 
                 min="1" 
-                value="<?= htmlspecialchars($customer->age) ?>" 
+                value="<?= htmlspecialchars($customer->number_of_rooms) ?>" 
+                required
+            >
+
+            <label for="age">Color</label>
+            <input 
+                type="text" 
+                id="color" 
+                name="color" 
+                min="1" 
+                value="<?= htmlspecialchars($customer->color) ?>" 
                 required
             >
 

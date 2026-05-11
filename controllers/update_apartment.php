@@ -7,15 +7,17 @@ use RedBeanPHP\R;
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $id = $_POST['id'] ?? null;
     $name = trim($_POST['name'] ?? '');
-    $age = trim($_POST['age'] ?? '');
+    $rooms = trim($_POST['number_of_rooms'] ?? '');
+    $color = trim($_POST['color'] ?? '');
 
     if (
         !$id ||
         !is_numeric($id) ||
         $name === '' ||
-        $age === '' ||
+        $rooms === '' ||
         !is_numeric($age) ||
-        (int) $age <= 0
+        (int) $age <= 0 ||
+        $color === ''
     ) {
         header('Location: ../records.php');
         exit;
@@ -29,7 +31,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 
     $customer->name = $name;
-    $customer->age = (int) $age;
+    $customer->rooms = (int) $rooms;
+    $customer->color = $color;
 
     R::store($customer);
 

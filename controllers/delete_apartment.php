@@ -12,10 +12,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         exit;
     }
 
-    $aparment = R::load('apartment', (int) $id);
+    $apartment = R::load('apartment', (int) $id);
 
-    if ($customer->id) {
-        R::trash($customer);
+    if ($apartment->id) {
+        R::trash($apartment);
     }
 
     header('Location: ../records.php?status=deleted');

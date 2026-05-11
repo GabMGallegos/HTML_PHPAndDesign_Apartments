@@ -37,7 +37,8 @@ $status = $_GET['status'] ?? '';
                 <tr>
                     <th>ID</th>
                     <th>Name</th>
-                    <th>time</th>
+                    <th>Number Of rooms</th>
+                    <th>Color</th>
                     <th>Actions</th>
                 </tr>
             </thead>
@@ -48,6 +49,7 @@ $status = $_GET['status'] ?? '';
                         <tr>
                             <td><?= htmlspecialchars($apartment->id) ?></td>
                             <td><?= htmlspecialchars($apartment->name) ?></td>
+                            <td><?= htmlspecialchars($apartment->number_of_rooms) ?></td>
                             <td><?= htmlspecialchars($apartment->age) ?></td>
                             <td>
                                 <a href="edit.php?id=<?= htmlspecialchars($apartment->id) ?>">

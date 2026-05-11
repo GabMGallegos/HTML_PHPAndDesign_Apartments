@@ -6,16 +6,18 @@ use RedBeanPHP\R;
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $name = trim($_POST['name'] ?? '');
-    $age = trim($_POST['age'] ?? '');
+    $rooms = trim($_POST['rooms'] ?? '');
+    $color = trim($_POST['color'] ?? '');
 
-    if ($name === '' || $age === '' || !is_numeric($age) || (int) $age <= 0) {
+    if ($name === '' || $rooms === '' || !is_numeric($rooms) || (int) $rooms <= 0) {
         header('Location: ../index.php?status=error');
         exit;
     }
 
     $aparment = R::dispense('aparment');
     $aparment->name = $name;
-    $aparment->age = (int) $age;
+    $aparment->rooms = (int) $rooms;
+    $aparment->color = $color;
 
     R::store($aparment);
 
