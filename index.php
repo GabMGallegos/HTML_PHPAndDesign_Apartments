@@ -17,7 +17,7 @@ $status = $_GET['status'] ?? '';
         <h1>Create Customer</h1>
 
         <?php if ($status === 'success'): ?>
-            <p class="success-message">Customer saved successfully.</p>
+            <p class="success-message">Aparment saved successfully.</p>
         <?php endif; ?>
 
         <?php if ($status === 'error'): ?>
@@ -31,7 +31,7 @@ $status = $_GET['status'] ?? '';
             <label for="age">Age</label>
             <input type="number" id="age" name="age" min="1" required>
 
-            <button type="submit">Save customer</button>
+            <button type="submit">Save Aparment</button>
         </form>
 
         <a class="link-button" href="records.php">View records</a>

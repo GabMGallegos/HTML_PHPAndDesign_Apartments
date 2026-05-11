@@ -12,7 +12,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         exit;
     }
 
-    $customer = R::load('customer', (int) $id);
+    $aparment = R::load('apartment', (int) $id);
 
     if ($customer->id) {
         R::trash($customer);

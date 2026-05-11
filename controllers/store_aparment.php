@@ -13,11 +13,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         exit;
     }
 
-    $customer = R::dispense('customer');
-    $customer->name = $name;
-    $customer->age = (int) $age;
+    $aparment = R::dispense('aparment');
+    $aparment->name = $name;
+    $aparment->age = (int) $age;
 
-    R::store($customer);
+    R::store($aparment);
 
     header('Location: ../index.php?status=success');
     exit;

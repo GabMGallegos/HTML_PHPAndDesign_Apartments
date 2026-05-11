@@ -32,7 +32,7 @@ $status = $_GET['status'] ?? '';
 <body>
 
     <main class="container">
-        <h1>Edit Customer</h1>
+        <h1>Edit aparment</h1>
 
         <?php if ($status === 'error'): ?>
             <p class="error-message">Please complete all fields correctly.</p>
@@ -60,7 +60,7 @@ $status = $_GET['status'] ?? '';
                 required
             >
 
-            <button type="submit">Update customer</button>
+            <button type="submit">Update Aparment</button>
         </form>
 
         <a class="link-button" href="records.php">Back to records</a>
