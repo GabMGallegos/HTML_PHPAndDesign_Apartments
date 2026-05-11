@@ -50,7 +50,7 @@ $status = $_GET['status'] ?? '';
                             <td><?= htmlspecialchars($apartment->id) ?></td>
                             <td><?= htmlspecialchars($apartment->name) ?></td>
                             <td><?= htmlspecialchars($apartment->number_of_rooms) ?></td>
-                            <td><?= htmlspecialchars($apartment->age) ?></td>
+                            <td><?= htmlspecialchars($apartment->color) ?></td>
                             <td>
                                 <a href="edit.php?id=<?= htmlspecialchars($apartment->id) ?>">
                                     Edit
