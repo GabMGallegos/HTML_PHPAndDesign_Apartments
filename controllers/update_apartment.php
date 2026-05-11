@@ -23,9 +23,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         exit;
     }
 
-    $customer = R::load('customer', (int) $id);
+    $apartment = R::load('apartment', (int) $id);
 
-    if (!$customer->id) {
+    if (!$apartment->id) {
         header('Location: ../records.php');
         exit;
     }
