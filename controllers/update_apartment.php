@@ -30,11 +30,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         exit;
     }
 
-    $customer->name = $name;
-    $customer->rooms = (int) $rooms;
-    $customer->color = $color;
+    $apartment->name = $name;
+    $apartment->rooms = (int) $rooms;
+    $apartment->color = $color;
 
-    R::store($customer);
+    R::store($apartment);
 
     header('Location: ../records.php?status=updated');
     exit;

@@ -11,9 +11,9 @@ if (!$id || !is_numeric($id)) {
     exit;
 }
 
-$customer = R::load('customer', (int) $id);
+$apartment = R::load('apartment', (int) $id);
 
-if (!$customer->id) {
+if (!$apartment->id) {
     header('Location: records.php');
     exit;
 }
@@ -38,8 +38,8 @@ $status = $_GET['status'] ?? '';
             <p class="error-message">Please complete all fields correctly.</p>
         <?php endif; ?>
 
-        <form action="controllers/update_customer.php" method="POST">
-            <input type="hidden" name="id" value="<?= htmlspecialchars($customer->id) ?>">
+        <form action="controllers/update_apartment.php" method="POST">
+            <input type="hidden" name="id" value="<?= htmlspecialchars($apartment->id) ?>">
 
             <label for="name">Name</label>
             <input 
