@@ -6,7 +6,7 @@ use RedBeanPHP\R;
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $name = trim($_POST['name'] ?? '');
-    $rooms = trim($_POST['rooms'] ?? '');
+    $rooms = trim($_POST['number_of_rooms'] ?? '');
     $color = trim($_POST['color'] ?? '');
 
     if ($name === '' || $rooms === '' || !is_numeric($rooms) || (int) $rooms <= 0) {
@@ -14,12 +14,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         exit;
     }
 
-    $aparment = R::dispense('aparment');
-    $aparment->name = $name;
-    $aparment->rooms = (int) $rooms;
-    $aparment->color = $color;
+    $apartment = R::dispense('apartment');
+    $apartment->name = $name;
+    $apartment->rooms = (int) $rooms;
+    $apartment->color = $color;
 
-    R::store($aparment);
+    R::store($apartment);
 
     header('Location: ../index.php?status=success');
     exit;

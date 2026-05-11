@@ -24,7 +24,7 @@ $status = $_GET['status'] ?? '';
             <p class="error-message">Please complete all fields correctly.</p>
         <?php endif; ?>
 
-        <form action="controllers/store_customer.php" method="POST">
+        <form action="controllers/store_apartment.php" method="POST">
             <label for="name">Name</label>
             <input type="text" id="name" name="name" required>
             
