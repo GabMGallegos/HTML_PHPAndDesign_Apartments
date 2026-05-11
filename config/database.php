@@ -7,7 +7,7 @@ use RedBeanPHP\R;
 
 try {
     $dotenv = Dotenv::createImmutable(__DIR__ . '/../');
-    $dotenv->load();
+    $dotenv->safeLoad();
 
     $host = $_ENV['DB_HOST'] ?? '';
     $port = $_ENV['DB_PORT'] ?? '';
