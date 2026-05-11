@@ -4,7 +4,7 @@ require_once __DIR__ . '/config/database.php';
 
 use RedBeanPHP\R;
 
-$customers = R::findAll('apartment', 'order by id desc');
+$apartment = R::findAll('apartment', 'order by id desc');
 
 $status = $_GET['status'] ?? '';
 
